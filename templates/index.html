@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,41 +10,56 @@
     <title>New Chat</title>
     <style>
         body {
-        overflow-y: auto; /* Enable vertical scrolling for the entire page */
-    }
+            overflow-y: auto;
+            /* Enable vertical scrolling for the entire page */
+        }
+
         .right2 {
             display: none;
         }
 
+        /* .omnibot-title {
+            padding-left: 40px;
+            /* Increase or decrease as needed */
+        
+
+
         .chat-container {
             flex: 1;
-        overflow-y: auto;
-        padding: 20px 0;
-        max-height: calc(100vh - 100px); /* Adjust the maximum height */
-        max-width: calc(100% - 40px); 
+            overflow-y: auto;
+            padding: 20px 0;
+            max-height: calc(100vh - 100px);
+            /* Adjust the maximum height */
+            max-width: calc(100% - 40px);
             word-wrap: break-word;
         }
 
         .right2 {
-         display: flex;
-        flex-direction: column;
-        justify-content: center; /* Center the content vertically */
-        align-items: center; /* Center the content horizontally */
-        padding: 40px; /* Add padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center the content vertically */
+            align-items: center;
+            /* Center the content horizontally */
+            padding: 40px;
+            /* Add padding */
         }
 
         .chat-content {
             flex: 1;
             overflow-y: auto;
             padding: 20px 0;
-            max-width: calc(100% - 40px); /* Limit the width of the chat content */
+            max-width: calc(100% - 40px);
+            /* Limit the width of the chat content */
         }
 
         .chat-input {
             position: fixed;
             bottom: 0;
-            left: 40px; /* Adjust left position */
-            width: calc(100% - 60px); /* Adjust width */
+            left: 40px;
+            /* Adjust left position */
+            width: calc(100% - 60px);
+            /* Adjust width */
             padding: 20px;
             background-color: #202123;
             display: flex;
@@ -102,33 +116,41 @@
             background-color: #3a3a3a;
             padding: 10px;
             border-radius: 5px;
-            max-width: 600px;;
+            max-width: 600px;
+            ;
             color: white;
             word-wrap: break-word;
         }
+
         .chat-box.question .chat-text {
-            max-width: 600px; /* Adjust padding */
-            min-width: auto; /* Remove min-width */
+            max-width: 600px;
+            /* Adjust padding */
+            min-width: auto;
+            /* Remove min-width */
             width: auto;
-            word-wrap: break-word; /* Remove fixed width */
+            word-wrap: break-word;
+            /* Remove fixed width */
         }
 
         .chat-box.answer .chat-text {
-            max-width: 600px; /* Adjust padding */
-            min-width: auto; /* Remove min-width */
+            max-width: 600px;
+            /* Adjust padding */
+            min-width: auto;
+            /* Remove min-width */
             width: auto;
-            word-wrap: break-word; /* Remove fixed width */
+            word-wrap: break-word;
+            /* Remove fixed width */
         }
     </style>
 </head>
 
 <body class="bg-chatblack-50">
     <div class="flex  h-[100vh] text-white">
-        <div class="right1 py-10 pl-96 m-10 w-fit flex justify-self-center  flex-col">
-            <div class="text-center w-full text-4xl font-bold my-10">
+        <div class="right1 py-5 pr-12 pl-40 m-10 w-full flex justify-self-center flex-col">
+            <div class="class=omnibot-title pl-96 justify-end  w-full text-4xl font-bold my-10">
                 OmniBot
             </div>
-            <div class="itemsrow flex py-4 w-[43vw] justify-around">
+            <div class="itemsrow items-center flex py-2 w-[43vw] justify-around">
                 <div class="examples flex flex-col justify-center items-center">
                     <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
                         stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em"
@@ -145,12 +167,12 @@
                     </svg>
                     <div class="py-2">Examples</div>
                     <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">Explain
+                        class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">Explain
                         quantum computing in simple terms</button>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">What exactly is artificial intelligence, and how does it affect our daily lives?.</button>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">What are some recent advancements in space exploration, and how do they benefit humanity</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">What
+                        exactly is artificial intelligence, and how does it affect our daily lives</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">What
+                        are some recent advancements in space exploration, and how do they benefit humanity</button>
 
                 </div>
                 <div class="cap flex flex-col justify-center items-center">
@@ -161,11 +183,15 @@
                     </svg>
                     <div class="py-2">Capabilities</div>
                     <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">Despite its memory constraint, the chatbot efficiently adapts to the immediate context of conversations, ensuring relevant replies based on recent prompts.</button>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md"> Automatic deletion of past interactions after three prompts safeguards user privacy by minimizing the retention of sensitive data.</button>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">By limiting memory usage, the chatbot optimizes resource allocation, fostering faster processing and smoother performance.</button>
+                        class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">Despite
+                        its memory constraint, the chatbot efficiently adapts to the immediate context of conversations,
+                        ensuring relevant replies based on recent prompts</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">
+                        Automatic deletion of past interactions after three prompts safeguards user privacy by
+                        minimizing the retention of sensitive data</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">By
+                        limiting memory usage, the chatbot optimizes resource allocation, fostering faster processing
+                        and smoother performance</button>
                 </div>
                 <div class="lim flex flex-col justify-center items-center">
                     <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
@@ -178,15 +204,18 @@
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
                     </svg>
                     <div class="py-2">Limitations</div>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">The chatbot's limited capacity to remember only three prompts restricts its ability to retain context over extended conversations.</button>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">Due to its ephemeral memory, the chatbot struggles to sustain long-term engagement with users, potentially leading to repetitive interactions./button>
-                    <button
-                        class="bg-gray-600 w-[13vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md"> With a three-prompt limit, there's a heightened risk of crucial information being forgotten prematurely, impacting the accuracy of responses.</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">The
+                        chatbot's limited capacity to remember only three prompts restricts its ability to retain
+                        context over extended conversations</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md">Due to
+                        its ephemeral memory, the chatbot struggles to sustain long-term engagement with users,
+                        potentially leading to repetitive interactions</button>
+                    <button class="bg-gray-600 w-[22vw] text-sm hover:bg-gray-700 py-4 px-4 mx-4 my-2 rounded-md"> With
+                        a three-prompt limit, there's a heightened risk of crucial information being forgotten
+                        prematurely, impacting the accuracy of responses</button>
                 </div>
             </div>
-            
+
         </div>
         <div class="right2 justify-center w-full flex flex-col chat-container">
             <div id="chatContainer" class="chat-content"></div>
@@ -203,10 +232,12 @@
                 </button>
             </div> -->
             <div class="chat-input">
-                <input id="questionInput2" class="w-full bg-gray-600 rounded-md" placeholder="Send a message" type="text">
+                <input id="questionInput2" class="w-full bg-gray-600 rounded-md" placeholder="Send a message"
+                    type="text">
                 <button id="sendButton2" class="pl-10">
                     <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
-                        stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                     </svg>
